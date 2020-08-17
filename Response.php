@@ -4,13 +4,12 @@
 class Response
 {
 
-    private $title;
-    private $correct;
+    public $title;
+    public $BONNE_REPONSE;
 
-    public function __construct($title, $correct)
+    public function __construct($title)
     {
         $this->$title = $title;
-        $this->$correct = $correct;
     }
 
     /**

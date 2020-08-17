@@ -4,13 +4,25 @@
 class Question
 {
        public $title;
-       public $response;
+       public $responseCollection = array();
        public $explication;
 
        public function __construct($title)
        {
+              $this->responseCollection = [];
               $this->title = $title;
        }
+
+       public function addReponse(Response $response)
+       {
+              if (in_array($response, $this->responseCollection, true)) {
+                     return false;
+              } else {
+                     $this->responseCollection[] = $response;
+                     return true;
+              }
+       }
+
 
        /**
         * Get the value of title
@@ -70,9 +82,5 @@ class Question
               $this->explication = $explication;
 
               return $this;
-       }
-
-       public function ajouterReponse(Response $response)
-       {
        }
 }

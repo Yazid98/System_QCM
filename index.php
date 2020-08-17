@@ -19,26 +19,21 @@ require_once('Response.php');
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1 class="display-4">Bienvenue sur le Système de QCM de Lab Event</h1>
-        <p class="lead">On a besoin de créer un questionnaire pour une entreprise. <br> <br> Objectif : évaluer son équipe après une formation. </p>
-        <hr class="my-4">
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="display-4">Bienvenue sur le Système de QCM de Lab Event</h1>
+            <p class="lead">On a besoin de créer un questionnaire pour une entreprise. <br> <br> Objectif : évaluer son équipe après une formation. </p>
+            <hr class="my-4">
+        </div>
     </div>
-
     <div class="container">
 
         <?php
 
-        echo 'Salut toi';
-
         $qcm = new QCM();
 
-        $question1 = new Question("Je m'appelle : ");
-        $question1->ajouterReponse(new Response("Yazid", true));
-        $question1->setExplication("C'est mon nom de famille");
-
-        $qcm->ajouterQuestion($question1);
-        var_dump($question1);
+        $question1 = new Question('Je m\'appelle :');
+        $question1->addReponse(new Response("Eric Badarou", true));
 
 
 
@@ -46,15 +41,6 @@ require_once('Response.php');
 
 
 
-
-
-
-
-
-
-
-
-        
 
 
 
@@ -70,6 +56,132 @@ require_once('Response.php');
 
 
         ?>
+        <!--
+        <h1>Système d'évaluation de la formation de Lab Event</h1>
+
+        <br>
+
+        <h2>QCM</h2>
+        <h3 class="mb-4">Questions : </h3>
+
+        <h4> 1. PHP est un language : </h4>
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+                Procédural ?
+            </label>
+        </div>
+
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+            <label class="form-check-label" for="defaultCheck2">
+                Orienté objet ?
+            </label>
+        </div>
+
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+            <label class="form-check-label" for="defaultCheck3">
+                avec l'architecture MVC ?
+            </label>
+        </div>
+
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+            <label class="form-check-label" for="defaultCheck4">
+                Facile à apprendre ?
+            </label>
+        </div>
+
+        <h4> 2. C est un language : </h4>
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+            <label class="form-check-label" for="defaultCheck5">
+                Procédural ?
+            </label>
+        </div>
+
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+            <label class="form-check-label" for="defaultCheck6">
+                Orienté objet ?
+            </label>
+        </div>
+
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
+            <label class="form-check-label" for="defaultCheck8">
+                avec l'architecture MVC ?
+            </label>
+        </div>
+
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck9">
+            <label class="form-check-label" for="defaultCheck9">
+                Facile à apprendre ?
+            </label>
+        </div>
+
+        <h4> 3. C++ est un language : </h4>
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck10">
+            <label class="form-check-label" for="defaultCheck10">
+                Procédural ?
+            </label>
+        </div>
+
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck11">
+            <label class="form-check-label" for="defaultCheck11">
+                Orienté objet ?
+            </label>
+        </div>
+
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck12">
+            <label class="form-check-label" for="defaultCheck12">
+                avec l'architecture MVC ?
+            </label>
+        </div>
+
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck13">
+            <label class="form-check-label" for="defaultCheck13">
+                Facile à apprendre ?
+            </label>
+        </div>
+
+        <h4> 4. Java est un language : </h4>
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck14">
+            <label class="form-check-label" for="defaultCheck14">
+                Procédural ?
+            </label>
+        </div>
+
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck15">
+            <label class="form-check-label" for="defaultCheck15">
+                Orienté objet ?
+            </label>
+        </div>
+
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck16">
+            <label class="form-check-label" for="defaultCheck16">
+                avec l'architecture MVC ?
+            </label>
+        </div>
+
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck17">
+            <label class="form-check-label" for="defaultCheck17">
+                Facile à apprendre ?
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-4">Valider le QCM</button> -->
+
     </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
